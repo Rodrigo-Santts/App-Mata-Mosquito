@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Mata mosquito</title>
+   <script>
+
+   function niveis(){
+      let niveis = document.getElementById('niveis').value
+      if(niveis === ''){
+      alert('Selecione um nível')
+         return false
+      }
+
+      window.location.href = 'app.html?' + niveis
+   }
+   
+   </script>
+</head>
+<body>
+   <div class="container">
+      <img src="/img/game.png" alt=""><br>
+      <select id="niveis">
+         <option value="">-- Selecione o Nível --</option>
+         <option value="normal">Normal</option>
+         <option value="dificil">Difícil</option>
+         <option value="chuckNorris">Chuck Norris</option>
+      </select><br>
+      <button type="button" onclick="niveis()" ><a href="/app.html">Iniciar jogo</a></button>
+   </div>
+</body>
+</html>
